@@ -48,3 +48,5 @@
   ![Gambar_elbow](analyst/elbow_method.png)
   according to this image using k-value 25, so fitting and predict With these parameters, the accuracy score obtained with a train split test of 10% total data is 82%.
     
+
+# TO BE CONTINUE
