@@ -49,4 +49,9 @@
   according to this image using k-value 25, so fitting and predict With these parameters, the accuracy score obtained with a train split test of 10% total data is 82%.
     
 
+## Deployment
+  ### FastAPI
+    with basemodel (same as a interface in TypeScript) for feature input
+  #### Result
+  ![gambar post prediction](img\apifeed.PNG)
 # TO BE CONTINUE
