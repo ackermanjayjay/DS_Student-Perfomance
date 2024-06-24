@@ -53,5 +53,5 @@
   ### FastAPI
     with basemodel (same as a interface in TypeScript) for feature input
   #### Result
-  ![gambar post prediction](img\apifeed.PNG)
+  ![gambar_post_prediction](img/apifeed.PNG)
 # TO BE CONTINUE
