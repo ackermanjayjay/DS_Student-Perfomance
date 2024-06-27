@@ -87,3 +87,7 @@ Using Standard scaler for normalize StudyTime Weekly cause best case to normaliz
 ![gambar_result_input](img/result_api.PNG)
 
 # TO BE CONTINUE
+<pre>
+* DO create database like crud
+* adding comparion  why choose dec tree
+</pre>
