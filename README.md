@@ -54,4 +54,5 @@
     with basemodel (same as a interface in TypeScript) for feature input
   #### Result
   ![gambar_post_prediction](img/apifeed.PNG)
+  ![gambar_result_input](img/result_api.PNG)
 # TO BE CONTINUE
