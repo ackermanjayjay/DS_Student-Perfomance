@@ -7,18 +7,18 @@ def preprocess_feature_data(data):
     ParentalSupport = {}
 
 
-def loadInputIterative(data):
+def load_input_iterative(data):
     simpan = []
     result = {}
     for value in data:
         simpan.append(value)
     result = {
-        "StudyTimeWeekly": simpan[0],
-        "Absences": simpan[1],
-        "ParentalSupport": simpan[2],
-        "Tutoring": simpan[3],
-        "Sports": simpan[4],
-        "Music": simpan[5],
-        "Volunteering": simpan[6],
+        "studyTimeWeekly": simpan[0],
+        "absences": simpan[1],
+        "parentalSupport": simpan[2],
+        "tutoring": simpan[3],
+        "sports": simpan[4],
+        "music": simpan[5],
+        "volunteering": simpan[6],
     }
     return result

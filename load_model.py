@@ -1,7 +1,6 @@
 import pickle
 import os
 import logging
-from sklearn.tree import DecisionTreeClassifier
 def prediction(feature):
     try :
         predictor_load = pickle.load(open(os.path.join("model", "model_tree.pkl"), "rb"))

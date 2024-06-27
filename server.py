@@ -1,13 +1,12 @@
 from typing import Union
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, status
 
 from load_model import prediction
 from pydantic import BaseModel
-from model import InputData
+from model import InputData, classification_student
 import numpy as np
 
-from preprocess import loadInputIterative
 
 app = FastAPI()
 
@@ -17,26 +16,14 @@ def read_root():
     return {"Hello": "World dunia halo"}
 
 
-@app.post("/prediction/")
-
+@app.post("/prediction/", status_code=status.HTTP_200_OK)
 def classification(data: InputData):
     try:
-        input_array = np.array(
-            [
-                data.StudyTimeWeekly,
-                data.Absences,
-                data.Tutoring,
-                data.ParentalSupport,
-                data.Sports,
-                data.Music,
-                data.Volunteering,
-            ]
-        )
-        result = prediction(input_array)
+        result = classification_student(data)
         return {
-            "Statuscode": 200,
-            "prediction": result[0],
-            "Input": loadInputIterative(input_array),
+            "data": result,
         }
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=str(e)
+        )
